@@ -13,7 +13,7 @@ const puppeteer = require('puppeteer');
         await page.waitForSelector("._3m_Xw")
         await delay(3000)
 
-        const contactName = "Cae"
+        const contactName = "NOme do contato aqui"
         await page.click(`span[title='${contactName}']`)
         await page.waitForSelector("._2lMWa")
 
@@ -24,7 +24,7 @@ const puppeteer = require('puppeteer');
 
         for (var i = 0; i < amountOfMessages; i++){
             await page.evaluate(()=> {
-                const message = "Me Responde";
+                const message = "Mensagem que vai ser enviada";
                 document.execCommand("insertText", false, message)
 
             })
